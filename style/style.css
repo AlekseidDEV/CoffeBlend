@@ -1419,7 +1419,6 @@ textarea::-webkit-scrollbar-track {
 }
 
 .map {
-    background: green;
     max-width: 1800px;
     width: 100%;
     height: 490px;
@@ -1688,6 +1687,33 @@ a {
     display: flex;
     flex-direction: column;
     gap: 50px 0px;
+}
+
+.ol-zoom{
+    margin-top: 15px;
+    margin-left: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.ol-zoom-out,
+.ol-zoom-in{
+    background: #c49b63;
+    outline: none;
+    border: none;
+    width: 35px;
+    height: 25px;
+    color: #fff;
+}
+
+
+
+.icon_map{
+    background: #8d652d;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    border-radius: 50%;
 }
 
 
