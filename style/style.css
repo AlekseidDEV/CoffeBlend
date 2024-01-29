@@ -85,7 +85,12 @@ body {
 }
 
 .block_btns_offers{
-   text-align: center;
+   display: flex;
+   max-width: 400px;
+   width: 100%;
+   justify-content: center;
+   gap: 0px 20px;
+   z-index: 1;
 }
 
 .sticky{
@@ -191,8 +196,8 @@ body {
 }
 
 .offers_slider{
-    padding-top: 130px;
-    padding-bottom: 130px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -202,13 +207,14 @@ body {
 
 
 .offers_slide_item{
-    max-width: 760px;
+    max-width: 100%;
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
     opacity: 0;
     transition: 0.4s;
+    transform: translate(-50%, 0%);
 }
 
 .offers_cont_slide{
@@ -216,17 +222,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 60px;
 }
+
+
 
 .slide_active{
     opacity: 1;
-    transition: 0.4s;
+    transition: 0.8s;
 }
 
 .wrapp_items{
     position: relative;
-    max-width: 760px;
+    max-width: 100%;
     width: 100%;
     z-index: 1;
     height: 432px;
@@ -301,7 +309,7 @@ body {
     font-style: normal;
     font-weight: 300;
     line-height: 27px; /* 150% */
-    margin-bottom: 49px;
+    margin-bottom: 79px;
 }
 
 .dots {
@@ -321,7 +329,12 @@ body {
     /* back */
     border: 1px solid #c49b63;
     background: #c49b63;
-    padding: 17px 24px 17px 25px;
+    max-width: 119px;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .order_now:hover {
@@ -348,7 +361,12 @@ body {
     line-height: 19.5px; /* 150% */
     /* back */
     border: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 17px 24px 17px 25px;
+    max-width: 119px;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* offers_block */
 
@@ -1016,17 +1034,126 @@ textarea::-webkit-scrollbar-track {
 
 /* block_gallery */
 .img_gall {
-    max-width: 768px;
-    width: 100%;
-    height: 300px;
     object-fit: cover;
     min-width: 190px;
+    cursor: pointer;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_gall:nth-child(1){
+    background: url(../images/pict11.png) no-repeat center/cover;
+}
+
+.img_gall:nth-child(2){
+    background: url(../images/pict12.png) no-repeat center/cover;
+}
+
+.img_gall:nth-child(3){
+    background: url(../images/pict13.png) no-repeat center/cover;
+}
+
+.img_gall:nth-child(4){
+    background: url(../images/pict14.png) no-repeat center/cover;
+}
+
+.loop_icon{
+    width: 50px;
+    height: 50px;
+    background: #c49b63;
+    display: flex;
+}
+
+.rotate_block{
+    position: relative;
+    opacity: 0;
+}
+
+.modal_wind{
+    background: #b18c59;
+    padding: 100px;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.block_inner_text{
+    max-width: 450px;
+    width: 100%;
+}
+
+.close_modal_gall{
+    position: absolute;
+    display: flex;
+    width: 25px;
+    top: 20px;
+    right: 20px;
+    height: 25px;
+    background: url(../images/icons/add.svg) no-repeat center;
+}
+
+.titl_gall{
+    color: #fff;
+    text-align: left;
+    font-family: "Josefin Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.gallery_open_img{
+    max-width: 432px;
+    width: 100%;
+}
+.text_gall{
+    max-width: 100%;
+    width: 100%;
+    color: #fff;
+    text-align: left;
+    font-family: "Poppins";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 27px;
+}
+
+.modal_window_gallery{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #000000d6;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.rotate_block::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../images/icons/loop.svg) no-repeat center;
+    width: 20px;
+    height: 20px;
+    display: flex;
 }
 
 .wrapper_cont_gall {
     max-width: 100%;
     width: 100%;
     display: flex;
+    height: 300px;
     justify-content: center;
 }
 /* block_gallery */
@@ -1607,6 +1734,17 @@ a {
     .wrapper_tizer_card{
         justify-content: center;
         gap: 40px 25px;
+    }
+
+    .modal_wind{
+        justify-content: center;
+        padding: 60px 20px 20px 20px;
+        flex-wrap: wrap;
+    }
+
+    .titl_gall,
+    .text_gall{
+        text-align: center;
     }
 
     .reviews_block{

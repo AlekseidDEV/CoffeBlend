@@ -46,8 +46,6 @@ export const autoSlider = (time, item, activeItem) => {
                 background-size: cover;
                         `;
         changeDots(count)
-
-        console.log(count);
     }
 
     const startSlider = () => {
@@ -57,7 +55,6 @@ export const autoSlider = (time, item, activeItem) => {
             return
        }
     }
-
 
     addDots()
     startSlider()
