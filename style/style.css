@@ -627,6 +627,14 @@ textarea::-webkit-scrollbar-track {
     align-items: center;
 }
 
+.pic{
+    background: none;
+    border: none;
+    max-width: 100px;
+    width: 100%;
+    outline: none;
+}
+
 .text_our {
     color: #808080;
     font-family: "Poppins";
@@ -697,8 +705,10 @@ textarea::-webkit-scrollbar-track {
 
 .wrapper_img_border {
     border: 1px solid #674c27;
-    max-width: 100px;
-    width: 100%;
+}
+
+.tizer_img{
+    padding: 19px;
 }
 
 .tizer_card {
@@ -709,9 +719,7 @@ textarea::-webkit-scrollbar-track {
     align-items: center;
 }
 
-.tizer_img {
-    padding: 19px;
-}
+
 
 .title_tiz {
     color: #000;
@@ -837,10 +845,27 @@ textarea::-webkit-scrollbar-track {
 
 /* tizer-total */
 
-.wrapper_total_border {
-    max-width: 80px;
-    width: 100%;
+.wrapper_total_{
+    position: relative;
+}
+
+.border_tizer_img {
     border: 1px solid #c49b63;
+    width: 80px;
+    height: 80px;
+    display: flex;
+}
+
+.wrapper_total_::after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: url(../images/icons/coffepackage.svg) no-repeat center;
+    z-index: -1;
 }
 
 .number_total {
@@ -851,6 +876,8 @@ textarea::-webkit-scrollbar-track {
     font-style: normal;
     font-weight: 400;
     line-height: 54px; /* 180% */
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .tizers_text_total {
@@ -864,7 +891,7 @@ textarea::-webkit-scrollbar-track {
 }
 
 .tix_total_card {
-    max-width: 120px;
+    max-width: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -980,9 +1007,23 @@ textarea::-webkit-scrollbar-track {
     margin-bottom: 14px;
 }
 
+.dish,
+.deserts,
+.drinks{
+    display: none !important;
+}
+
+.activeBlock{
+    display: flex !important;
+}
+
+
 .coffe_img{
     max-width: 256px;
     width: 100%;
+    min-height: 210px;
+    max-height: 210px;
+    object-fit: cover;
 }
 
 .text_card_coffe {
@@ -1035,10 +1076,10 @@ textarea::-webkit-scrollbar-track {
 /* block_gallery */
 .img_gall {
     object-fit: cover;
-    min-width: 190px;
     cursor: pointer;
     max-width: 100%;
     width: 100%;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1906,11 +1947,17 @@ a {
     gap: 0px 5px;
 }
 
+
 .collapce_menu{
     background: #000;
     padding-top: 40px;
     padding-bottom: 40px;
-    display: none;
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    top: -540px;
+    left: 0;
+    z-index: 5;
 }
 
 .mobail_cart_block{
@@ -2119,7 +2166,8 @@ a {
 
     .wrapper_cont_gall{
         flex-direction: column;
-    } 
+        height: 100%;
+    }
 }
 
 @media (max-width: 675px){

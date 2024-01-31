@@ -41,22 +41,7 @@
                 </div>
             </div>
 
-            <div class="collapce_menu">
-                <div class="container">
-                    <div class="box-content">
-                        <a href="#" class="link_header_nav test">menu</a>
-                        <a href="/Service.html" class="link_header_nav">Services</a>
-                        <a href="#" class="link_header_nav">Blog</a>
-                        <a href="#" class="link_header_nav">About</a>
-                        <a href="#" class="link_header_nav">Shop</a>
-                        <a href="#" class="link_header_nav">Contact</a>
-                        <div class="mobail_cart_block">
-                            <a href="#" class="link_cart"></a>
-                            <span class="count_cart">1</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
             <div class="modal_cart_window">
                 <div class="wrapper_cont_cart">
@@ -97,6 +82,24 @@
                 </div>
             </div>
         </div>
+
+            <div class="collapce_menu">
+                    <div class="container">
+                        <div class="box-content">
+                            <a href="#" class="link_header_nav test">menu</a>
+                            <a href="/Service.html" class="link_header_nav">Services</a>
+                            <a href="#" class="link_header_nav">Blog</a>
+                            <a href="#" class="link_header_nav">About</a>
+                            <a href="#" class="link_header_nav">Shop</a>
+                            <a href="#" class="link_header_nav">Contact</a>
+                            <div class="mobail_cart_block">
+                                <a href="#" class="link_cart mob_link"></a>
+                                <span class="count_cart">1</span>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
     </header>
 
     <main>
@@ -234,10 +237,13 @@
                         <input name="last_name" class="input_contact name_table" type="text" placeholder="Last Name">
                     </div>
 
+
+                   
+
                     <div class="order_data_user">
                         <label class="input_date_custom" for="input1">
                             <input id="input1" class="input_contact date_table" type="date">
-                            <span class="cust_placeholder">Date</span>
+                            <input class="date_choose pic" type="text">
                             <a href="#" class="link_date_choose"></a>
                         </label>
                         <label class="input_time_custom" for="input2">
@@ -375,50 +381,56 @@
             <div class="container">
                 <div class="cont_tizer_total">
                     <div class="tix_total_card">
-                        <div class="wrapper_total_border">
-                            <img class="tizer_img" src="./images/icons/coffepackage.svg" alt="img">
+                        <div class="wrapper_total_">
+                            <span class="border_tizer_img"></span>
                         </div>
-                        <p class="number_total">
-                            50
+                        <p data-total_count="100" class="number_total">
+                            0
                         </p>
                         <p class="tizers_text_total">
                             Coffee Branches
                         </p>
                     </div>
 
-                    <div class="tix_total_card">
+                    <div  class="tix_total_card">
                         <div class="wrapper_total_border">
-                            <img class="tizer_img" src="./images/icons/coffepackage.svg" alt="img">
+                            <div class="wrapper_total_">
+                                <span class="border_tizer_img"></span>
+                            </div>
                         </div>
-                        <p class="number_total">
-                            50
+                        <p data-total_count="85" class="number_total">
+                            0
                         </p>
                         <p class="tizers_text_total">
-                            Coffee Branches
+                            Number of Awards
                         </p>
                     </div>
 
                     <div class="tix_total_card">
                         <div class="wrapper_total_border">
-                            <img class="tizer_img" src="./images/icons/coffepackage.svg" alt="img">
+                            <div class="wrapper_total_">
+                                <span class="border_tizer_img"></span>
+                            </div>
                         </div>
-                        <p class="number_total">
-                            50
+                        <p data-total_count="10567" class="number_total">
+                            0
                         </p>
                         <p class="tizers_text_total">
-                            Coffee Branches
+                            Happy Customer
                         </p>
                     </div>
 
                     <div class="tix_total_card">
                         <div class="wrapper_total_border">
-                            <img class="tizer_img" src="./images/icons/coffepackage.svg" alt="img">
+                            <div class="wrapper_total_">
+                                <span class="border_tizer_img"></span>
+                            </div>
                         </div>
-                        <p class="number_total">
-                            50
+                        <p data-total_count="900" class="number_total">
+                            0
                         </p>
                         <p class="tizers_text_total">
-                            Coffee Branches
+                            Staff
                         </p>
                     </div>
                 </div>
@@ -610,75 +622,213 @@
                 </p>
 
                 <div class="block_btn_tabs">
-                    <a href="#" class="btn_tab_prod activeTab">Main Dish</a>
-                    <a href="#" class="btn_tab_prod">Drinks</a>
-                    <a href="#" class="btn_tab_prod">Desserts</a>
+                    <a id="dish" href="#" class="btn_tab_prod activeTab">Main Dish</a>
+                    <a id="drinks" href="#" class="btn_tab_prod">Drinks</a>
+                    <a id="deserts" href="#" class="btn_tab_prod">Desserts</a>
                 </div>
 
-                <div class="block_card_product">
-                    <div id="product-5" class="card_coffe">
-                        <img src="./images/pict15.png" alt="img" class="coffe_img">
-
-                        <p class="tit_card_coffe">
-                            Coffee Capuccino
-                        </p>
-
-
-                        <p class="text_card_coffe">
-                            A small river named Duden flows
-                            by their place and supplies
-                        </p>
-
-                        <p class="sale_prod">
-                            $6.00
-                        </p>
-
-                        <div class="wrapp_add_prod">
-                            <a href="#" class="prod_add_cart">Add to Cart</a>
+                <div class="tabs_block">
+                    <div class="block_card_product dish activeBlock">
+                        <div id="product-5" class="card_coffe">
+                            <img src="./images/pict15.png" alt="img" class="coffe_img">
+    
+                            <p class="tit_card_coffe">
+                                Coffee Capuccino
+                            </p>
+    
+    
+                            <p class="text_card_coffe">
+                                A small river named Duden flows
+                                by their place and supplies
+                            </p>
+    
+                            <p class="sale_prod">
+                                $6.00
+                            </p>
+    
+                            <div class="wrapp_add_prod">
+                                <a href="#" class="prod_add_cart">Add to Cart</a>
+                            </div>
+                        </div>
+    
+                        <div id="product-6" class="card_coffe">
+                            <img src="./images/pict16.png" alt="img" class="coffe_img">
+    
+                            <p class="tit_card_coffe">
+                                Coffee Capuccino
+                            </p>
+    
+    
+                            <p class="text_card_coffe">
+                                A small river named Duden flows
+                                by their place and supplies
+                            </p>
+    
+                            <p class="sale_prod">
+                                $7.00
+                            </p>
+    
+                            <div class="wrapp_add_prod">
+                                <a href="#" class="prod_add_cart">Add to Cart</a>
+                            </div>
+                        </div>
+    
+                        <div id="product-7" class="card_coffe">
+                            <img src="./images/pict17.png" alt="img" class="coffe_img">
+    
+                            <p class="tit_card_coffe">
+                                Coffee Capuccino
+                            </p>
+    
+    
+                            <p class="text_card_coffe">
+                                A small river named Duden flows
+                                by their place and supplies
+                            </p>
+    
+                            <p class="sale_prod">
+                                $2.50
+                            </p>
+    
+                            <div class="wrapp_add_prod">
+                                <a href="#" class="prod_add_cart">Add to Cart</a>
+                            </div>
                         </div>
                     </div>
-
-                    <div id="product-6" class="card_coffe">
-                        <img src="./images/pict16.png" alt="img" class="coffe_img">
-
-                        <p class="tit_card_coffe">
-                            Coffee Capuccino
-                        </p>
-
-
-                        <p class="text_card_coffe">
-                            A small river named Duden flows
-                            by their place and supplies
-                        </p>
-
-                        <p class="sale_prod">
-                            $7.00
-                        </p>
-
-                        <div class="wrapp_add_prod">
-                            <a href="#" class="prod_add_cart">Add to Cart</a>
+    
+                    <div class="block_card_product drinks">
+                        <div id="product-5" class="card_coffe">
+                            <img src="./images/drink1.webp" alt="img" class="coffe_img">
+    
+                            <p class="tit_card_coffe">
+                                Coffee Capuccino
+                            </p>
+    
+    
+                            <p class="text_card_coffe">
+                                A small river named Duden flows
+                                by their place and supplies
+                            </p>
+    
+                            <p class="sale_prod">
+                                $6.00
+                            </p>
+    
+                            <div class="wrapp_add_prod">
+                                <a href="#" class="prod_add_cart">Add to Cart</a>
+                            </div>
+                        </div>
+    
+                        <div id="product-6" class="card_coffe">
+                            <img src="./images/drink2.webp" alt="img" class="coffe_img">
+    
+                            <p class="tit_card_coffe">
+                                Coffee Capuccino
+                            </p>
+    
+    
+                            <p class="text_card_coffe">
+                                A small river named Duden flows
+                                by their place and supplies
+                            </p>
+    
+                            <p class="sale_prod">
+                                $7.00
+                            </p>
+    
+                            <div class="wrapp_add_prod">
+                                <a href="#" class="prod_add_cart">Add to Cart</a>
+                            </div>
+                        </div>
+    
+                        <div id="product-7" class="card_coffe">
+                            <img src="./images/drink3.webp" alt="img" class="coffe_img">
+    
+                            <p class="tit_card_coffe">
+                                Coffee Capuccino
+                            </p>
+    
+    
+                            <p class="text_card_coffe">
+                                A small river named Duden flows
+                                by their place and supplies
+                            </p>
+    
+                            <p class="sale_prod">
+                                $2.50
+                            </p>
+    
+                            <div class="wrapp_add_prod">
+                                <a href="#" class="prod_add_cart">Add to Cart</a>
+                            </div>
                         </div>
                     </div>
-
-                    <div id="product-7" class="card_coffe">
-                        <img src="./images/pict17.png" alt="img" class="coffe_img">
-
-                        <p class="tit_card_coffe">
-                            Coffee Capuccino
-                        </p>
-
-
-                        <p class="text_card_coffe">
-                            A small river named Duden flows
-                            by their place and supplies
-                        </p>
-
-                        <p class="sale_prod">
-                            $2.50
-                        </p>
-
-                        <div class="wrapp_add_prod">
-                            <a href="#" class="prod_add_cart">Add to Cart</a>
+    
+                    <div class="block_card_product deserts">
+                        <div id="product-5" class="card_coffe">
+                            <img src="./images/desert.webp" alt="img" class="coffe_img">
+    
+                            <p class="tit_card_coffe">
+                                Coffee Capuccino
+                            </p>
+    
+    
+                            <p class="text_card_coffe">
+                                A small river named Duden flows
+                                by their place and supplies
+                            </p>
+    
+                            <p class="sale_prod">
+                                $6.00
+                            </p>
+    
+                            <div class="wrapp_add_prod">
+                                <a href="#" class="prod_add_cart">Add to Cart</a>
+                            </div>
+                        </div>
+    
+                        <div id="product-6" class="card_coffe">
+                            <img src="./images/desert2.webp" alt="img" class="coffe_img">
+    
+                            <p class="tit_card_coffe">
+                                Coffee Capuccino
+                            </p>
+    
+    
+                            <p class="text_card_coffe">
+                                A small river named Duden flows
+                                by their place and supplies
+                            </p>
+    
+                            <p class="sale_prod">
+                                $7.00
+                            </p>
+    
+                            <div class="wrapp_add_prod">
+                                <a href="#" class="prod_add_cart">Add to Cart</a>
+                            </div>
+                        </div>
+    
+                        <div id="product-7" class="card_coffe">
+                            <img src="./images/desert3.webp" alt="img" class="coffe_img">
+    
+                            <p class="tit_card_coffe">
+                                Coffee Capuccino
+                            </p>
+    
+    
+                            <p class="text_card_coffe">
+                                A small river named Duden flows
+                                by their place and supplies
+                            </p>
+    
+                            <p class="sale_prod">
+                                $2.50
+                            </p>
+    
+                            <div class="wrapp_add_prod">
+                                <a href="#" class="prod_add_cart">Add to Cart</a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,10 @@ import { smoothScroll } from "./modules/smothscroll";
 import map from './modules/mapModule'
 import { openCart } from "./modules/opencart";
 import { addCartFunc } from "./modules/addCart";
+import { menuCollapse } from "./modules/collapse";
+import { tabsFunc } from "./modules/tabs";
+import { runCount } from "./modules/runningCounter";
+import { rotateIcon } from "./modules/rotateIcon";
 
 smoothScroll()
 fixHeader()
@@ -14,3 +18,9 @@ offersBtns()
 galleryFunc()
 openCart()
 addCartFunc()
+menuCollapse()
+tabsFunc()
+runCount()
+rotateIcon()
+
+

@@ -52,6 +52,7 @@ export const addCartFunc = () => {
             subTotal.textContent = `$${fullPrice.toFixed(2)}`;
             devilery.textContent = `$5.00`;
             totalFull.textContent = `$${totalFinal.toFixed(2)}`;
+            discont.textContent = `$0.00`;
         } else if (fullPrice > 20 && fullPrice <= 30) {
             totalFinal = fullPrice - 3;
 
@@ -76,8 +77,15 @@ export const addCartFunc = () => {
 
     const calcCart = () => {
         const products = document.querySelectorAll(".prodict_checked");
+        const nullText = document.querySelector('.null_cart')
 
         let fullPrice = 0;
+
+        if(products.length === 0){
+            nullText.style.display = 'flex'
+        } else{
+            nullText.style.display = 'none'
+        }
 
         products.forEach((product) => {
             const priceElement = product.querySelector(".price");
@@ -95,6 +103,7 @@ export const addCartFunc = () => {
 
             fullPrice += price * quantity;
         });
+
         setFullPrice(Math.round(fullPrice));
         collectionData(products);
     };
@@ -153,7 +162,10 @@ export const addCartFunc = () => {
         calcCart();
     };
 
-    const unloadingCart = (data) => {
+    const unloadingCart = (data, messega) => {
+        
+        messega.style.display = 'none'
+
         counter = data.length;
         spanCount.textContent = counter;
 
@@ -188,7 +200,7 @@ export const addCartFunc = () => {
         if (cartData.length === 0) {
             return;
         } else {
-            unloadingCart(cartData);
+            unloadingCart(cartData, document.querySelector('.null_cart'));
         }
     };
 
