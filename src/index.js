@@ -11,6 +11,9 @@ import { tabsFunc } from "./modules/tabs";
 import { runCount } from "./modules/runningCounter";
 import { rotateIcon } from "./modules/rotateIcon";
 
+// import 'air-datepicker/air-datepicker.css';
+import { pik } from "./modules/customTime";
+
 smoothScroll()
 fixHeader()
 autoSlider(5000, ".offers_slide_item", ".slide_active")
@@ -22,5 +25,6 @@ menuCollapse()
 tabsFunc()
 runCount()
 rotateIcon()
+pik()
 
 

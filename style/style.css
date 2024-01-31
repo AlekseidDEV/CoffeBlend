@@ -16,6 +16,9 @@ img {
 ul {
     list-style-type: none;
 }
+input{
+    outline: none;
+}
 
 body {
     background: url(../images/bg1.png) no-repeat fixed;
@@ -67,6 +70,8 @@ body {
 /* fonts */
 
 /* header_nav */
+
+
 
 .header{
     position: relative;
@@ -374,7 +379,7 @@ body {
 
 .block_book_table {
     background: #000;
-    height: 173px;
+    height: 213px;
     margin-top: auto;
     max-width: 100%;
     width: 100%;
@@ -382,6 +387,53 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 1;
+}
+
+.timeChange{
+    display: flex;
+    background: #f0f0f0;
+    width: 200px;
+    border-radius: 2px;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    left: 150px;
+    top: 80px;
+    opacity: 0;
+    transition: 0.4s;
+    z-index: -999;
+}
+
+.row_minutse p{
+    color: rgb(55, 55, 55);
+font-size: 25px;
+font-family: "Josefin Sans";
+margin-bottom: 5px;
+}
+
+.row_minutse{
+    height: 50px;
+    overflow-y: scroll;
+}
+
+.timeChange span{
+    color: rgb(55, 55, 55);
+font-size: 40px;
+font-family: "Josefin Sans";
+}
+
+.row_hourse{
+    overflow-y: scroll;
+    height: 50px;
+}
+
+.row_hourse p{
+color: rgb(55, 55, 55);
+font-size: 25px;
+font-family: "Josefin Sans";
+margin-bottom: 5px;
 }
 
 .wrapp_table_cont {
@@ -536,9 +588,10 @@ body {
 .order_data_user {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
-.order_data_user input,
+.order_data_user,
 label {
     max-width: 452px;
     width: 100%;
@@ -633,6 +686,11 @@ textarea::-webkit-scrollbar-track {
     max-width: 100px;
     width: 100%;
     outline: none;
+    color: #fff;
+}
+
+.pic::placeholder{
+    color: #fff;
 }
 
 .text_our {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/picker.css">
     <script src="./dist/main.js" defer></script>
     <title>Coffe Blend</title>
 </head>
@@ -243,14 +244,29 @@
                     <div class="order_data_user">
                         <label class="input_date_custom" for="input1">
                             <input id="input1" class="input_contact date_table" type="date">
-                            <input class="date_choose pic" type="text">
+                            <input id="air" class="date_choose pic" type="text" placeholder="Date">
                             <a href="#" class="link_date_choose"></a>
                         </label>
                         <label class="input_time_custom" for="input2">
                             <input id="input2" class="input_contact time_table" type="time">
-                            <span class="cust_placeholder">Time</span>
+                            <p class="cust_placeholder">
+                                <span class="stock_text">Time</span>
+                                <span class="hour"></span>
+                                <span class="min"></span>
+                            </p>
                             <a href="#" class="link_time_choose"></a>
+
+                            <div class="timeChange">
+                                <div class="row_hourse">
+                
+                                </div>
+                                <span>:</span>
+                                <div class="row_minutse">
+                
+                                </div>
+                            </div>
                         </label>
+        
                         <input class="input_contact" type="tel" placeholder="Phone">
                     </div>
 
@@ -264,8 +280,8 @@
         </div>
         <!-- wrapp_table_cont -->
 
-        <div id="about" class="section_our_story">
-            <div class="cont_our_section">
+        <div id="about" class="section_our_story" style="padding-top: 100px; padding-bottom: 100px;">
+            <div class="cont_our_section" style="display: none;">
                 <img src="./images/pict2.png" alt="img" class="our_img_section">
 
                 <div class="block_text_our">
@@ -1096,13 +1112,27 @@
                         <div class="order_data_user">
                             <label class="input_date_custom" for="input3">
                                 <input id="input3" class="input_contact date_table" type="date">
-                                <span class="cust_placeholder">Date</span>
+                                <input id="air2" class="date_choose pic" type="text" placeholder="Date">
                                 <a href="#" class="link_date_choose"></a>
                             </label>
                             <label class="input_time_custom" for="input4">
                                 <input id="input4" class="input_contact time_table" type="time">
-                                <span class="cust_placeholder">Time</span>
+                                <p class="cust_placeholder">
+                                    <span class="stock_text">Time</span>
+                                    <span class="hour"></span>
+                                    <span class="min"></span>
+                                </p>
                                 <a href="#" class="link_time_choose"></a>
+
+                                <div class="timeChange">
+                                    <div class="row_hourse">
+                    
+                                    </div>
+                                    <span>:</span>
+                                    <div class="row_minutse">
+                    
+                                    </div>
+                                </div>
                             </label>
                             <input class="input_contact" type="tel" placeholder="Phone">
                         </div>
