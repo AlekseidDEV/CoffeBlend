@@ -7,6 +7,7 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/picker.css">
+    <link rel="stylesheet" href="./style/time.css">
     <script src="./dist/main.js" defer></script>
     <title>Coffe Blend</title>
 </head>
@@ -227,7 +228,7 @@
             </div>
 
             <div class="block_table_form">
-                <form class="book_table_form">
+                <form id="form_head" class="book_table_form">
 
                     <h3 class="title_form_contact">
                         Book a Table
@@ -238,36 +239,16 @@
                         <input name="last_name" class="input_contact name_table" type="text" placeholder="Last Name">
                     </div>
 
-
-                   
-
                     <div class="order_data_user">
                         <label class="input_date_custom" for="input1">
-                            <input id="input1" class="input_contact date_table" type="date">
-                            <input id="air" class="date_choose pic" type="text" placeholder="Date">
+                            <input name="date" id="air" class="date_choose pic" type="text" placeholder="Date">
                             <a href="#" class="link_date_choose"></a>
                         </label>
-                        <label class="input_time_custom" for="input2">
-                            <input id="input2" class="input_contact time_table" type="time">
-                            <p class="cust_placeholder">
-                                <span class="stock_text">Time</span>
-                                <span class="hour"></span>
-                                <span class="min"></span>
-                            </p>
-                            <a href="#" class="link_time_choose"></a>
-
-                            <div class="timeChange">
-                                <div class="row_hourse">
-                
-                                </div>
-                                <span>:</span>
-                                <div class="row_minutse">
-                
-                                </div>
-                            </div>
+  
+                        <label class="clock">
+                            <input name="time" id="fck" class="input_contact" type="text">
                         </label>
-        
-                        <input class="input_contact" type="tel" placeholder="Phone">
+                        <input name="tel" class="input_contact" type="tel" placeholder="Phone">
                     </div>
 
                     <div class="message_and_btn">
@@ -280,8 +261,8 @@
         </div>
         <!-- wrapp_table_cont -->
 
-        <div id="about" class="section_our_story" style="padding-top: 100px; padding-bottom: 100px;">
-            <div class="cont_our_section" style="display: none;">
+        <div id="about" class="section_our_story">
+            <div class="cont_our_section">
                 <img src="./images/pict2.png" alt="img" class="our_img_section">
 
                 <div class="block_text_our">
@@ -1097,7 +1078,7 @@
                 </div>
 
                 <div class="wrapper_form_map">
-                    <form class="book_table_form">
+                    <form id="form_foot" class="book_table_form">
 
                         <h3 class="title_form_contact">
                             Book a Table
@@ -1110,29 +1091,14 @@
                         </div>
 
                         <div class="order_data_user">
-                            <label class="input_date_custom" for="input3">
-                                <input id="input3" class="input_contact date_table" type="date">
+                            <label class="input_date_custom cust" for="input3">
+
                                 <input id="air2" class="date_choose pic" type="text" placeholder="Date">
                                 <a href="#" class="link_date_choose"></a>
                             </label>
-                            <label class="input_time_custom" for="input4">
-                                <input id="input4" class="input_contact time_table" type="time">
-                                <p class="cust_placeholder">
-                                    <span class="stock_text">Time</span>
-                                    <span class="hour"></span>
-                                    <span class="min"></span>
-                                </p>
-                                <a href="#" class="link_time_choose"></a>
 
-                                <div class="timeChange">
-                                    <div class="row_hourse">
-                    
-                                    </div>
-                                    <span>:</span>
-                                    <div class="row_minutse">
-                    
-                                    </div>
-                                </div>
+                            <label class="clock">
+                                <input name="time" id="fck2" class="input_contact" type="text">
                             </label>
                             <input class="input_contact" type="tel" placeholder="Phone">
                         </div>

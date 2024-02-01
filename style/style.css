@@ -387,53 +387,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-shrink: 1;
-}
-
-.timeChange{
-    display: flex;
-    background: #f0f0f0;
-    width: 200px;
-    border-radius: 2px;
-    overflow: hidden;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    position: absolute;
-    left: 150px;
-    top: 80px;
-    opacity: 0;
-    transition: 0.4s;
-    z-index: -999;
-}
-
-.row_minutse p{
-    color: rgb(55, 55, 55);
-font-size: 25px;
-font-family: "Josefin Sans";
-margin-bottom: 5px;
-}
-
-.row_minutse{
-    height: 50px;
-    overflow-y: scroll;
-}
-
-.timeChange span{
-    color: rgb(55, 55, 55);
-font-size: 40px;
-font-family: "Josefin Sans";
-}
-
-.row_hourse{
-    overflow-y: scroll;
-    height: 50px;
-}
-
-.row_hourse p{
-color: rgb(55, 55, 55);
-font-size: 25px;
-font-family: "Josefin Sans";
-margin-bottom: 5px;
+    z-index: 1;
 }
 
 .wrapp_table_cont {
@@ -577,8 +531,8 @@ margin-bottom: 5px;
     display: flex;
 }
 
-.input_date_custom,
-.input_time_custom {
+.input_date_custom
+ {
     align-items: center;
     justify-content: space-between;
     display: flex;
@@ -589,24 +543,45 @@ margin-bottom: 5px;
     display: flex;
     justify-content: space-between;
     position: relative;
+    gap: 20px 20px;
 }
 
-.order_data_user,
-label {
+.clock{
+    position: relative;
+}
+
+.clock::after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: 5px;
+    background: url(../images/icons/clockform.svg) no-repeat center;
+    width: 15px;
+    height: 15px;
+    transform: translate(0%, -50%);
+}
+
+
+.order_data_user label{
     max-width: 452px;
     width: 100%;
-    padding: 20px 0px;
 }
 
-.order_data_user label {
-    margin-right: 24px;
+
+.order_data_user
+ input {
+    max-width: 452px;
+    width: 100%;
+    padding: 15px 0px;
 }
+
 
 .link_date_choose {
     width: 15px;
     height: 15px;
     display: flex;
     background: url(../images/icons/dateform.svg) no-repeat center;
+    flex-shrink: 0;
 }
 
 .link_time_choose {

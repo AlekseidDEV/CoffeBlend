@@ -11,8 +11,8 @@ import { tabsFunc } from "./modules/tabs";
 import { runCount } from "./modules/runningCounter";
 import { rotateIcon } from "./modules/rotateIcon";
 
-// import 'air-datepicker/air-datepicker.css';
 import { pik } from "./modules/customTime";
+import { calendar } from "./modules/customCalendar";
 
 smoothScroll()
 fixHeader()
@@ -26,5 +26,6 @@ tabsFunc()
 runCount()
 rotateIcon()
 pik()
+calendar()
 
 
