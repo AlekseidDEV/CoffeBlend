@@ -13,6 +13,12 @@ import { rotateIcon } from "./modules/rotateIcon";
 
 import { pik } from "./modules/customTime";
 import { calendar } from "./modules/customCalendar";
+import { sendForm } from "./modules/sendform";
+import { animateObserver } from "./modules/observer";
+
+
+
+
 
 smoothScroll()
 fixHeader()
@@ -20,12 +26,21 @@ autoSlider(5000, ".offers_slide_item", ".slide_active")
 offersBtns()
 galleryFunc()
 openCart()
-addCartFunc()
+if(window.innerWidth > 768){
+    addCartFunc('.desk')
+} else if(window.innerWidth <= 768){
+    addCartFunc('.mob')
+}
 menuCollapse()
 tabsFunc()
 runCount()
 rotateIcon()
 pik()
 calendar()
+sendForm()
+animateObserver()
+
+
+
 
 

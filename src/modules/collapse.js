@@ -2,14 +2,14 @@ import { animate } from "./hellpers"
 
 export const menuCollapse = () => {
     const menu = document.querySelector('.collapce_menu')
-
-    const cartBtn = document.querySelector('.mob_link')
+    const menuMobailLink = document.querySelector(".menu_mob_wrapper")
+    const wrapperCollapce = document.querySelector('.wrapper_collapse')
+    const stray = wrapperCollapce.querySelector('.stray')
     const modalCart = document.querySelector('.modal_cart_window')
 
     let clicker = false
 
-    
-    const openMenu = () => {
+    const openMobMenu = () => {
         if(clicker){
             animate({
                 duration: 300,
@@ -18,8 +18,11 @@ export const menuCollapse = () => {
                 },
                 draw(progress) {
                     menu.style.top = `${-menu.clientHeight + progress * menu.clientHeight}px`
+
                 },
             });
+
+            stray.style.height = '100%'
         } else{
             animate({
                 duration: 300,
@@ -30,20 +33,27 @@ export const menuCollapse = () => {
                     menu.style.top = `${-progress * menu.clientHeight}px`
                 },
             });
+
+            stray.style.height = '0%'
         }
     }
 
-    document.addEventListener('click', (e) => {
+    menuMobailLink.addEventListener('click', (e) => {
         e.preventDefault()
-        
-        if(e.target.closest('.menu_mob_wrapper')){
-            clicker = !clicker
-            openMenu()
-        }
-    
+        clicker = !clicker
+        openMobMenu()
     })
 
-    // cartBtn.addEventListener('click', () => {
-    //     modalCart.style.display = 'flex'
-    // })
+    wrapperCollapce.addEventListener('click', (e) => {
+        if( e.target === stray ||
+            e.target.className === 'link_header_nav'
+        ){
+            clicker = false
+            openMobMenu()
+        } else if(e.target.matches('.mob_link')){
+            clicker = false
+            openMobMenu()
+            modalCart.style.display = 'flex'
+        }
+    })
 }

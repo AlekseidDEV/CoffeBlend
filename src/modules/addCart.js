@@ -1,7 +1,7 @@
-export const addCartFunc = () => {
+export const addCartFunc = (cartIconClass) => {
     const ourProdBlock = document.querySelector(".section_products");
     const bestCoffeBlock = document.querySelector(".block_best_coffe");
-    const spanCount = document.querySelector(".count_cart");
+    const spanCount = document.querySelector(cartIconClass);
     const blockAddedprod = document.querySelector(".prod_cart_check");
 
     let counter = 0;
@@ -76,7 +76,7 @@ export const addCartFunc = () => {
     };
 
     const calcCart = () => {
-        const products = document.querySelectorAll(".prodict_checked");
+        const products = blockAddedprod.querySelectorAll(".prodict_checked");
         const nullText = document.querySelector('.null_cart')
 
         let fullPrice = 0;
@@ -93,7 +93,8 @@ export const addCartFunc = () => {
             const totalSum = product.querySelector(".total");
 
             const price = parseFloat(priceElement.textContent.trim().slice(1));
-            const quantity = parseInt(quantityElement.value);
+            const quantity = parseInt(quantityElement.value, 10);
+
 
             if (isNaN(quantity)) {
                 totalSum.textContent = `$0.00`;
@@ -208,6 +209,10 @@ export const addCartFunc = () => {
 
     blockAddedprod.addEventListener("input", (e) => {
         if (e.target.className === "prod_quantity") {
+            const card = e.target.closest(".prodict_checked")
+            const newQuanty = card.querySelector('.prod_quantity')
+            newQuanty.defaultValue = e.target.value
+            
             calcCart();
         }
     });

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/picker.css">
     <link rel="stylesheet" href="./style/time.css">
+    <link rel="stylesheet" href="./style/picker.css">
+    <link rel="stylesheet" href="./style/style.css">
     <script src="./dist/main.js" defer></script>
     <title>Coffe Blend</title>
 </head>
@@ -33,11 +33,11 @@
 
                     <div class="icon_cart_block">
                         <a href="#" class="link_cart"></a>
-                        <span class="count_cart">0</span>
+                        <span class="count_cart desk">0</span>
                     </div>
 
                     <div class="menu_mob_wrapper">
-                        <spanc class="icon_menu_berger"></spanc>
+                        <span class="icon_menu_berger"></span>
                         <a href="#" class="menu_mobail">menu</a>
                     </div>
                 </div>
@@ -84,25 +84,27 @@
                 </div>
             </div>
         </div>
-
-            <div class="collapce_menu">
-                    <div class="container">
-                        <div class="box-content">
-                            <a href="#" class="link_header_nav test">menu</a>
-                            <a href="/Service.html" class="link_header_nav">Services</a>
-                            <a href="#" class="link_header_nav">Blog</a>
-                            <a href="#" class="link_header_nav">About</a>
-                            <a href="#" class="link_header_nav">Shop</a>
-                            <a href="#" class="link_header_nav">Contact</a>
-                            <div class="mobail_cart_block">
-                                <a href="#" class="link_cart mob_link"></a>
-                                <span class="count_cart">1</span>
-                            </div>
-                        </div>
-                    </div>
-                
-            </div>
     </header>
+
+    <div class="wrapper_collapse">
+        <div class="stray"></div>
+        <div class="collapce_menu">
+            <div class="container">
+                <div class="box-content">
+                        <a href="#menuscroll" class="link_header_nav test">menu</a>
+                        <a href="#tizerservice" class="link_header_nav">Services</a>
+                        <a href="#blog" class="link_header_nav">Blog</a>
+                        <a href="#about" class="link_header_nav">About</a>
+                        <a href="#prod" class="link_header_nav">Shop</a>
+                        <a href="#contact" class="link_header_nav">Contact</a>
+                    <div class="mobail_cart_block">
+                        <a href="#" class="link_cart mob_link"></a>
+                        <span class="count_cart mob">1</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main>
         <section class="offers_block">
@@ -254,7 +256,7 @@
                     <div class="message_and_btn">
                         <textarea class="input_contact message_field" name="message" maxlength="500"
                             placeholder="Message"></textarea>
-                        <a href="#" class="btn_book">Appointment</a>
+                        <button type="submit" class="btn_book">Appointment</button>
                     </div>
                 </form>
             </div>
@@ -1106,13 +1108,47 @@
                         <div class="message_and_btn">
                             <textarea class="input_contact message_field" name="message" maxlength="500"
                                 placeholder="Message"></textarea>
-                            <a href="#" class="btn_book map_btn">Appointment</a>
+                            <button type="submit" id="btn_foot" class="btn_book map_btn">Appointment</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
         <!-- block_map_location -->
+
+        <div class="succes_modal">
+            <div class="wrapp_cont">
+                <img src="./images/icons/succes.svg" alt="img">
+                <p class="title_message">successful submission</p>
+                <p class="desk_respons">
+                    our manager will contact you
+                </p>
+
+                <a href="#" class="close_message"></a>
+            </div>
+        </div>
+
+        <div class="warn_modal">
+            <div class="wrapp_cont">
+                <img src="./images/icons/warn.svg" alt="img">
+                <p class="title_message">warning</p>
+                <p class="desk_respons">
+                    check that the fields are filled in correctly
+                </p>
+                <a href="#" class="close_message"></a>
+            </div>
+        </div>
+
+        <div class="error_modal">
+            <div class="wrapp_cont">
+                <img src="./images/icons/error.svg" alt="img">
+                <p class="title_message">An error occurred</p>
+                <p class="desk_respons">
+                    repeat the mistake later
+                </p>
+                <a href="#" class="close_message"></a>
+            </div>
+        </div>
     </main>
 
     <footer id="contact" class="footer">

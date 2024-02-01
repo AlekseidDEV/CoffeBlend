@@ -632,12 +632,73 @@ textarea::-webkit-scrollbar-track {
     line-height: 19.5px; /* 150% */
     /* back */
     max-width: 490px;
+    border: none;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #fff;
     height: 53px;
+    cursor: pointer;
+}
+
+.warn_modal{
+    display: none;
+}
+
+.error_modal{
+    display: none;
+}
+
+.succes_modal{
+    display: none;
+}
+
+.warn_modal,
+.error_modal,
+.succes_modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #000000d6;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+}
+
+.title_message{
+    color: #fff;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-transform: uppercase;
+    margin-top: 27px;
+    margin-bottom: 14px;
+}
+
+.desk_respons{
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 27px; /* 180% */
+    text-align: center;
+}
+
+.wrapp_cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #232323;
+    padding: 50px;
+    border-radius: 2px;
+    position: relative;
 }
 
 .btn_book:hover {
@@ -1159,6 +1220,7 @@ textarea::-webkit-scrollbar-track {
     width: 100%;
 }
 
+.close_message,
 .close_modal_gall{
     position: absolute;
     display: flex;
@@ -1980,6 +2042,20 @@ a {
     gap: 0px 5px;
 }
 
+.wrapper_collapse{
+    position: relative;
+}
+
+.stray{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.622);
+    z-index: 9;
+}
+
 
 .collapce_menu{
     background: #000;
@@ -1990,7 +2066,7 @@ a {
     width: 100%;
     top: -540px;
     left: 0;
-    z-index: 5;
+    z-index: 10;
 }
 
 .mobail_cart_block{
