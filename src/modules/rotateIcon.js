@@ -1,4 +1,6 @@
-import { animate } from "./hellpers"
+import {
+    animate
+} from "./hellpers"
 
 
 export const rotateIcon = () => {
@@ -7,9 +9,9 @@ export const rotateIcon = () => {
     let stateAnimate = false
 
     const rotateFunc = (icon) => {
-      
 
-        if(stateAnimate){
+
+        if (stateAnimate) {
             animate({
                 duration: 200,
                 timing(timeFraction) {
@@ -19,7 +21,7 @@ export const rotateIcon = () => {
                     icon.style.transform = `rotate(${progress * 45}deg)`
                 },
             });
-        } else{
+        } else {
             animate({
                 duration: 200,
                 timing(timeFraction) {
@@ -33,14 +35,14 @@ export const rotateIcon = () => {
     }
 
     icons.addEventListener('mouseover', (e) => {
-        if(e.target.className === 'border_tizer_img'){
+        if (e.target.className === 'border_tizer_img') {
             stateAnimate = true
             rotateFunc(e.target)
         }
     })
 
     icons.addEventListener('mouseout', (e) => {
-        if(e.target.className === 'border_tizer_img'){
+        if (e.target.className === 'border_tizer_img') {
             stateAnimate = false
             rotateFunc(e.target)
         }

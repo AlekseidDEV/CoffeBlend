@@ -13,13 +13,13 @@ export const smoothScroll = () => {
 
     navMenu.addEventListener('click', (e) => {
         e.preventDefault()
-        if(e.target.nodeName === 'A'){
+        if (e.target.nodeName === 'A') {
             scrollToBlock(e.target.hash)
         }
     })
     linksCollapse.addEventListener('click', (e) => {
         e.preventDefault()
-        if(e.target.nodeName === 'A' && !e.target.matches(".mob_link")){
+        if (e.target.nodeName === 'A' && !e.target.matches(".mob_link")) {
             scrollToBlock(e.target.hash)
         }
     })

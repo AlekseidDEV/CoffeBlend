@@ -1,13 +1,15 @@
-import { animate } from "./hellpers"
+import {
+    animate
+} from "./hellpers"
 
 export const runCount = () => {
-    
+
     const blockToActiv = document.querySelector('.cont_tizer_total')
 
     let trashLoad = 0.7
     let hasRun = false
 
-    const isElementViewPort  = (elem) => {
+    const isElementViewPort = (elem) => {
         const rect = elem.getBoundingClientRect()
         const windowHeight = window.innerHeight
 
@@ -18,17 +20,17 @@ export const runCount = () => {
         const numberAll = document.querySelectorAll('.number_total')
 
         numberAll.forEach((numb) => {
-            if(numb.textContent.trim() === '0'){
-                 animate({
+            if (numb.textContent.trim() === '0') {
+                animate({
                     duration: 2500,
                     timing(timeFraction) {
-                    return timeFraction;
-                },
+                        return timeFraction;
+                    },
                     draw(progress) {
                         numb.textContent = `${Math.ceil(progress * numb.dataset['total_count'])}`
-                },
-            });
-            } else{
+                    },
+                });
+            } else {
                 return
             }
         })
@@ -36,10 +38,10 @@ export const runCount = () => {
 
     window.addEventListener('scroll', () => {
 
-        if(isElementViewPort(blockToActiv) && !hasRun){
+        if (isElementViewPort(blockToActiv) && !hasRun) {
             hasRun = true
             runnNumber()
-        } else if(!isElementViewPort(blockToActiv)){
+        } else if (!isElementViewPort(blockToActiv)) {
             hasRun = false
         }
     })

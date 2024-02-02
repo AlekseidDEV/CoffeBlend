@@ -11,11 +11,11 @@ export const offersBtns = () => {
     btns.forEach((elem) => {
         elem.addEventListener('click', (e) => {
 
-        e.preventDefault()
+            e.preventDefault()
 
-        if(e.target.localName === 'a'){
-            scrollBlock(e.target.hash)
-        }
-    })
+            if (e.target.localName === 'a') {
+                scrollBlock(e.target.hash)
+            }
+        })
     })
 }

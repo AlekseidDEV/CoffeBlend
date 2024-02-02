@@ -1,4 +1,6 @@
-import { animate } from "./hellpers"
+import {
+    animate
+} from "./hellpers"
 
 export const menuCollapse = () => {
     const menu = document.querySelector('.collapce_menu')
@@ -10,7 +12,7 @@ export const menuCollapse = () => {
     let clicker = false
 
     const openMobMenu = () => {
-        if(clicker){
+        if (clicker) {
             animate({
                 duration: 300,
                 timing(timeFraction) {
@@ -23,7 +25,7 @@ export const menuCollapse = () => {
             });
 
             stray.style.height = '100%'
-        } else{
+        } else {
             animate({
                 duration: 300,
                 timing(timeFraction) {
@@ -45,12 +47,12 @@ export const menuCollapse = () => {
     })
 
     wrapperCollapce.addEventListener('click', (e) => {
-        if( e.target === stray ||
+        if (e.target === stray ||
             e.target.className === 'link_header_nav'
-        ){
+        ) {
             clicker = false
             openMobMenu()
-        } else if(e.target.matches('.mob_link')){
+        } else if (e.target.matches('.mob_link')) {
             clicker = false
             openMobMenu()
             modalCart.style.display = 'flex'

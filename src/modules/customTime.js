@@ -1,6 +1,6 @@
 import flatpickr from "flatpickr"
 export const pik = () => {
-    
+
     const flatTimeTable = flatpickr("#fck", {
         enableTime: true,
         noCalendar: true,
@@ -19,4 +19,3 @@ export const pik = () => {
         maxTime: "22:00",
     })
 }
-

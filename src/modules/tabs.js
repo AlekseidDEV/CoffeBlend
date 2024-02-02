@@ -10,9 +10,9 @@ export const tabsFunc = () => {
 
         console.log(currentBlock);
 
-        if(elem.matches('.activeTab')){
+        if (elem.matches('.activeTab')) {
             return
-        } else{
+        } else {
             acriveTab.classList.remove('activeTab')
             elem.classList.add('activeTab')
             activeBlock.classList.remove('activeBlock')
@@ -23,7 +23,7 @@ export const tabsFunc = () => {
     blockBtns.addEventListener('click', (e) => {
         e.preventDefault()
 
-        if(e.target.localName === 'a'){
+        if (e.target.localName === 'a') {
             tabChange(e.target)
         }
     })

@@ -28,8 +28,7 @@ export const addCartFunc = (cartIconClass) => {
                 prodName: nameProd.textContent.trim(),
                 desc: desc.textContent.trim(),
                 priceOne: price.textContent.trim(),
-                quanty:
-                    quantity.value === undefined ? 1 : Number(quantity.value),
+                quanty: quantity.value === undefined ? 1 : Number(quantity.value),
                 total: total.textContent.trim(),
             };
 
@@ -77,14 +76,14 @@ export const addCartFunc = (cartIconClass) => {
 
     const calcCart = () => {
         const products = blockAddedprod.querySelectorAll(".prodict_checked");
-        const nullText = document.querySelector('.null_cart')
+        const nullText = document.querySelector(".null_cart");
 
         let fullPrice = 0;
 
-        if(products.length === 0){
-            nullText.style.display = 'flex'
-        } else{
-            nullText.style.display = 'none'
+        if (products.length === 0) {
+            nullText.style.display = "flex";
+        } else {
+            nullText.style.display = "none";
         }
 
         products.forEach((product) => {
@@ -94,7 +93,6 @@ export const addCartFunc = (cartIconClass) => {
 
             const price = parseFloat(priceElement.textContent.trim().slice(1));
             const quantity = parseInt(quantityElement.value, 10);
-
 
             if (isNaN(quantity)) {
                 totalSum.textContent = `$0.00`;
@@ -164,8 +162,7 @@ export const addCartFunc = (cartIconClass) => {
     };
 
     const unloadingCart = (data, messega) => {
-        
-        messega.style.display = 'none'
+        messega.style.display = "none";
 
         counter = data.length;
         spanCount.textContent = counter;
@@ -201,7 +198,7 @@ export const addCartFunc = (cartIconClass) => {
         if (cartData.length === 0) {
             return;
         } else {
-            unloadingCart(cartData, document.querySelector('.null_cart'));
+            unloadingCart(cartData, document.querySelector(".null_cart"));
         }
     };
 
@@ -209,10 +206,10 @@ export const addCartFunc = (cartIconClass) => {
 
     blockAddedprod.addEventListener("input", (e) => {
         if (e.target.className === "prod_quantity") {
-            const card = e.target.closest(".prodict_checked")
-            const newQuanty = card.querySelector('.prod_quantity')
-            newQuanty.defaultValue = e.target.value
-            
+            const card = e.target.closest(".prodict_checked");
+            const newQuanty = card.querySelector(".prod_quantity");
+            newQuanty.defaultValue = e.target.value;
+
             calcCart();
         }
     });

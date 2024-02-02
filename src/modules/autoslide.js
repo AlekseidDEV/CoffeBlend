@@ -2,25 +2,25 @@ export const autoSlider = (time, item, activeItem) => {
     const slides = document.querySelectorAll(item)
     const parentDots = document.querySelector('.dots')
     const wrapperBg = document.querySelector('.offers_block')
-    
+
     let interval
     let count = 0
 
     const addDots = () => {
-       for(let i = 0; i <= slides.length - 1; i++){
+        for (let i = 0; i <= slides.length - 1; i++) {
             const dotitem = document.createElement('span')
             parentDots.appendChild(dotitem)
-       }
+        }
 
-       const arrDots = parentDots.querySelectorAll('span')
+        const arrDots = parentDots.querySelectorAll('span')
 
-       arrDots.forEach((dot, index) => {
-            if(index === 0) {
+        arrDots.forEach((dot, index) => {
+            if (index === 0) {
                 dot.classList.add('dot', 'dotActive')
-            } else{
+            } else {
                 dot.classList.add('dot')
             }
-       })
+        })
     }
     const changeDots = (index) => {
         const activeDot = parentDots.querySelector('.dotActive')
@@ -35,7 +35,7 @@ export const autoSlider = (time, item, activeItem) => {
 
         count++
 
-        if(count >= slides.length){
+        if (count >= slides.length) {
             count = 0
         }
 
@@ -49,11 +49,11 @@ export const autoSlider = (time, item, activeItem) => {
     }
 
     const startSlider = () => {
-       if(document.querySelector(item) !== null){
+        if (document.querySelector(item) !== null) {
             interval = setInterval(changeSlide, time)
-       } else{
+        } else {
             return
-       }
+        }
     }
 
     addDots()

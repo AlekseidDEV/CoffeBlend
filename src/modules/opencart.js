@@ -5,9 +5,9 @@ export const openCart = () => {
     const openedFunc = (e) => {
         e.preventDefault()
 
-        if(e.target === cartBtn){
+        if (e.target === cartBtn) {
             modalCart.style.display = 'flex'
-        } else if(e.target === modalCart || e.target.className === 'close_cart_modal'){
+        } else if (e.target === modalCart || e.target.className === 'close_cart_modal') {
             modalCart.style.display = 'none'
         }
     }

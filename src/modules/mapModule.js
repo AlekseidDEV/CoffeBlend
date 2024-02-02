@@ -1,10 +1,18 @@
 import Map from 'ol/Map';
 import View from 'ol/View';
 import TileLayer from 'ol/layer/Tile';
-import { OSM, Vector as VectorSource } from 'ol/source';
-import { TileWMS, Vector as VectorLayer } from 'ol/layer';
+import {
+  OSM,
+  Vector as VectorSource
+} from 'ol/source';
+import {
+  TileWMS,
+  Vector as VectorLayer
+} from 'ol/layer';
 import Overlay from 'ol/Overlay';
-import { fromLonLat } from 'ol/proj';
+import {
+  fromLonLat
+} from 'ol/proj';
 import Zoom from 'ol/control/Zoom';
 
 
@@ -36,9 +44,9 @@ map.addLayer(vectorLayer);
 
 
 const marker = new Overlay({
-  position: fromLonLat([37, 56]), 
+  position: fromLonLat([37, 56]),
   positioning: 'center-center',
-  element: document.getElementById('marker'), 
+  element: document.getElementById('marker'),
   stopEvent: false,
 });
 map.addOverlay(marker);

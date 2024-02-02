@@ -1,4 +1,6 @@
-import { animate } from "./hellpers";
+import {
+    animate
+} from "./hellpers";
 
 export const galleryFunc = () => {
     const blockGallery = document.querySelector(".wrapper_cont_gall");
@@ -46,8 +48,8 @@ export const galleryFunc = () => {
 
     const galleryClose = (e) => {
         e.preventDefault()
-        
-        if(e.target.className === 'close_modal_gall' || e.target === galleryWindow){
+
+        if (e.target.className === 'close_modal_gall' || e.target === galleryWindow) {
             galleryWindow.style.display = 'none'
         }
     }
@@ -75,7 +77,7 @@ export const galleryFunc = () => {
     );
 
     blockGallery.addEventListener('click', (e) => {
-        if(e.target.closest('.img_gall')){
+        if (e.target.closest('.img_gall')) {
             openedGallery(e.target.closest('.img_gall').dataset["img_gall"])
         }
     })

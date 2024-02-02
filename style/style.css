@@ -2156,13 +2156,13 @@ a {
     color: #fff;
 }
 
-.animaObs{
+.animaObs {
     opacity: 0;
     transform: translateY(200px);
     transition: opacity 1s, transform 1s;
 }
 
-.animaObs.visible{
+.animaObs.visible {
     opacity: 1;
     transform: translateY(0px);
 }
