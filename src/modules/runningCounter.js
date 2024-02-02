@@ -20,7 +20,7 @@ export const runCount = () => {
         numberAll.forEach((numb) => {
             if(numb.textContent.trim() === '0'){
                  animate({
-                    duration: 2000,
+                    duration: 2500,
                     timing(timeFraction) {
                     return timeFraction;
                 },

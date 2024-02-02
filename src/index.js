@@ -38,7 +38,22 @@ rotateIcon()
 pik()
 calendar()
 sendForm()
-animateObserver()
+animateObserver(
+    '.info_tabs_contact', 
+    '.block_text_our',
+    '.wrapper_tizer_card',
+    '.text_menu_block',
+    '.cont_tizer_total',
+    '.our_discover',
+    '.wrapper_cont_gall',
+    '.txt_our_prod',
+    '.tabs_block',
+    '.adapt_wrapper_says',
+    '.reviews_block',
+    '.recent_wrapper',
+    '.cont_recent_block',
+    '.social_links'
+)
 
 
 
